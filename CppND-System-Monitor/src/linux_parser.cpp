@@ -62,7 +62,7 @@ vector<int> LinuxParser::Pids() {
         int pid = stoi(filename);
         pids.push_back(pid);
 
-        std::cout << "pid: " << pid << "\n";
+        //std::cout << "pid: " << pid << "\n";
       }
     }
   }

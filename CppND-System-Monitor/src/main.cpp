@@ -5,10 +5,7 @@
 int main() {
 
 
-  System system;
-  //system.jeff();
-  
- // system.UpTime();
+System system;
  
 NCursesDisplay::Display(system);
 }

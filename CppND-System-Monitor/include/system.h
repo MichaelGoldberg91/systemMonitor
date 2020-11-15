@@ -18,7 +18,7 @@ class System {
   std::string Kernel();               // TODO: See src/system.cpp
   std::string OperatingSystem();      // TODO: See src/system.cpp
 
-  long jeff();
+ 
 
   // TODO: Define any necessary private members
  private:
