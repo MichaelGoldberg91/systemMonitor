@@ -3,11 +3,12 @@
 #include <iostream>
 
 int main() {
- std::cout << "MOOOOO" << std::endl;
+
 
   System system;
+  //system.jeff();
   
-  system.MemoryUtilization();
+ // system.UpTime();
  
-//  NCursesDisplay::Display(system);
+NCursesDisplay::Display(system);
 }

@@ -3,12 +3,17 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include "linux_parser.h"
 
 #include "process.h"
 
 using std::string;
 using std::to_string;
 using std::vector;
+
+//constructor
+Process::Process(int p):pid_(p){};
+
 
 // TODO: Return this process's ID
 int Process::Pid() { return 0; }
@@ -20,7 +25,7 @@ float Process::CpuUtilization() { return 0; }
 string Process::Command() { return string(); }
 
 // TODO: Return this process's memory utilization
-string Process::Ram() { return string(); }
+string Process::Ram() {  return LinuxParser::Ram(Pid()); }
 
 // TODO: Return the user (name) that generated this process
 string Process::User() { return string(); }
