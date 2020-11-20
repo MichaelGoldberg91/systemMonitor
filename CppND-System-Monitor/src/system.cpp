@@ -16,23 +16,23 @@ using std::string;
 using std::vector;
 
 
-// TODO: Return the system's CPU
+// DONE: Return the system's CPU
 Processor& System::Cpu() { 
     
     return cpu_; }
 
-// TODO: Return a container composed of the system's processes
+// Needs Sort Help: Return a container composed of the system's processes
 vector<Process>& System::Processes() { 
     
-//   processes_.clear();
+  processes_.clear();
 
-//   for (int pid : LinuxParser::Pids())
-//   {
-//       Process process(pid);
-//       processes_.push_back(process);
-//   }
+  for (int pid : LinuxParser::Pids())
+  {
+      Process process(pid);
+      processes_.push_back(process);
+  }
 
-//   std::sort(processes_.begin(), processes_.end());
+   std::sort(processes_.begin(), processes_.end());
     
      return processes_;
  }

@@ -46,6 +46,9 @@ long ActiveJiffies();
 long ActiveJiffies(int pid);
 long IdleJiffies();
 
+//added for calculations
+float calculateProcessCpu(int pid, long t);
+
 // Processes
 std::string Command(int pid);
 std::string Ram(int pid);

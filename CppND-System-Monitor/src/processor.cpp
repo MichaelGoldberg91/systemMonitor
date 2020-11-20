@@ -2,7 +2,7 @@
 #include "linux_parser.h"
 #include <string>
 
-// TODO: Return the aggregate CPU utilization
+// DONE: Return the aggregate CPU utilization
 float Processor::Utilization() { 
     
     //creating variables (string for text file) from proc/stat
