@@ -21,7 +21,7 @@ Processor& System::Cpu() {
     
     return cpu_; }
 
-// Needs Sort Help: Return a container composed of the system's processes
+// DONE: Return a container composed of the system's processes
 vector<Process>& System::Processes() { 
     
   processes_.clear();
@@ -32,7 +32,10 @@ vector<Process>& System::Processes() {
       processes_.push_back(process);
   }
 
-   std::sort(processes_.begin(), processes_.end());
+   std::sort(processes_.begin(), processes_.end(),[](Process a, Process b)
+   {
+        return a.CpuUtilization() > b.CpuUtilization();
+   });
     
      return processes_;
  }

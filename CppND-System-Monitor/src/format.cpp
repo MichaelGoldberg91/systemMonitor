@@ -11,13 +11,15 @@ using std::string;
 // REMOVE: [[maybe_unused]] once you define the function
 string Format::ElapsedTime(long seconds) { 
     
+    //time variables 
     long hours = (seconds / 3600);
     long minutes = ((seconds / 60) % 60);
     long secondsOnly  = (seconds % 60);
     
+    //packaging string
     std::string s = std::to_string(hours) + ":" + std::to_string(minutes) + ":" + std::to_string(secondsOnly);
 
-    
+    //return
     return s;
     
      }

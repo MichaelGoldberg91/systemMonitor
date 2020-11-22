@@ -20,6 +20,8 @@ int Process::Pid() { return processID_; }
 
 // DONE: Return this process's CPU utilization
 float Process::CpuUtilization() { 
+
+    //creating cpu variable
     cpu = LinuxParser::calculateProcessCpu(Pid(), UpTime());
     return LinuxParser::calculateProcessCpu(Pid(), UpTime()); }
 

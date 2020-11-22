@@ -187,6 +187,7 @@ long LinuxParser::UpTime() {
 // DONE: Read and return the number of jiffies for the system
 long LinuxParser::Jiffies() {
   
+   //return Jiffies calculation
    return LinuxParser::UpTime() * sysconf(_SC_CLK_TCK); }
 
 // DONE: Read and return the number of active jiffies for a PID
@@ -224,11 +225,12 @@ long LinuxParser::ActiveJiffies(int pid) {
     //push to the back of vector
     tempVect.push_back(temp);
   }
-
+  //add times
   activeJiff = stol(tempVect[13]) + stol(tempVect[14]) + stol(tempVect[15]) + stol(tempVect[16]);
 
   }
   
+  //return active 
   return activeJiff; }
 
 // DONE: Read and return the number of active jiffies for the system
@@ -412,6 +414,7 @@ string LinuxParser::Ram(int pid) {
       std::istringstream linestream(line);
       while (linestream >> key >> value) {
 
+        //if key  == certain keyname
         if (key == "VmSize:") {
 
             //return value
@@ -420,6 +423,7 @@ string LinuxParser::Ram(int pid) {
       }
     }
   }  
+   //return ram
    return returnRam; }
 
 // DONE: Read and return the user ID associated with a process
@@ -441,6 +445,7 @@ string LinuxParser::Uid(int pid) {
       std::istringstream linestream(line);
       while (linestream >> key >> value) {
 
+        //if key  == keyname
         if (key == "Uid:") {
 
             //return value
@@ -449,7 +454,7 @@ string LinuxParser::Uid(int pid) {
       }
     }
   }  
-  
+   //return
    return uid; }
 
 // DONE: Read and return the user associated with a process
@@ -488,7 +493,7 @@ string LinuxParser::User(int pid) {
   
    return ""; }
 
-// Needs HELP: Read and return the uptime of a process
+// DONE: Read and return the uptime of a process
 // REMOVE: [[maybe_unused]] once you define the function
 long LinuxParser::UpTime(int pid) { 
 
