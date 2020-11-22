@@ -5,10 +5,6 @@
 
 using std::string;
 
-// DONE: Complete this helper function
-// INPUT: Long int measuring seconds
-// OUTPUT: HH:MM:SS
-// REMOVE: [[maybe_unused]] once you define the function
 string Format::ElapsedTime(long seconds) { 
 
     //string variables
@@ -38,7 +34,7 @@ string Format::ElapsedTime(long seconds) {
         minutesString = "0" + minutesString;
     }
 
-    if (seconds < 10)
+    if (secondsOnly < 10)
     {
        secondsString = "0" + secondsString;
     }
